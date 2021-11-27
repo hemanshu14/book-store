@@ -1,0 +1,87 @@
+@import "../../assets/scss/helpers/breakpoints";
+@import "../../assets/scss/helpers/variables";
+
+.ShowsList {
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include xl {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &__details {
+    width: 100vw;
+    @include md {
+      width: 80%;
+      height: 80%;
+    }
+
+    &-backdrop {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: $z-index-modal;
+      background-color: rgba(0, 0, 0, .85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__empty {
+    display: flex;
+    font-size: 1.25rem;
+    color: $gray600;
+    @include md {
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+      font-size: 1.5rem;
+    }
+  }
+
+
+  &__wrapper {
+    padding: 0 1rem;
+    color: #f1a760;
+    /*@include sm {
+      padding: 0 2rem;*/
+      margin-bottom: 1.5rem;
+    //}
+  }
+
+  &__details {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 20rem;
+    z-index: $z-index-modal;
+
+    @include sm {
+      position: absolute;
+      top: calc(100% - 1rem);
+      z-index: $z-index-dropdown;
+      .MovieDetails {
+        min-height: 30rem;
+      }
+      .btn--close {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../assets/scss/helpers/breakpoints";
+
+.HomePage {
+  &__slider-list {
+    height: 100vh;
+    @include sm {
+      height: 80vh;
+    }
+    padding: 5rem 0;
+  }
+}
+
+.unauthorizedAccess{
+  color: #f1a760;
+  margin-top: 60px;
+  margin-left: 40px;
+}
+
+

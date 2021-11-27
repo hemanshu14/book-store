@@ -1,0 +1,35 @@
+@import "../../assets/scss/helpers/breakpoints";
+@import "../../assets/scss/helpers/variables";
+
+.EpisodeDetailsItem {
+  margin: 2.5rem -0.25rem 16rem;
+  height: 10rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 3px solid transparent;
+
+  @include sm {
+    margin: 2.5rem -.25rem;
+  }
+
+
+}
+
+@media screen and (min-width: 576px) {
+  .EpisodeDetails {
+    margin: 0 25rem;
+    bottom: 14px;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .EpisodeDetails {
+    padding-top: 152px;
+    width: 27px;
+  }
+}
+
+.EpisodeSummaryDetails {
+  margin: 0 -20.5rem 0 0;
+}

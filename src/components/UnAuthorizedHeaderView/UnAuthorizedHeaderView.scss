@@ -1,0 +1,36 @@
+@import "../../assets/scss/helpers/breakpoints";
+@import "../../assets/scss/helpers/variables";
+
+
+.unauthorizedHeader{
+  position: absolute;
+  top: 0;
+  z-index: $z-index-header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  @include lg {
+    padding: 2rem 3rem;
+  }
+}
+
+.headerLogo{
+  grid-area: logo;
+  width: 5.6rem;
+  height: 1.7rem;
+  fill: $red;
+  @include sm {
+    margin-right: 1rem;
+    width: 10.5rem;
+    height: 2.9rem;
+  }
+}
+
+.unauthorizedHeaderActions{
+  grid-area: actions;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

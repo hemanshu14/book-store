@@ -1,0 +1,103 @@
+@import "../../assets/scss/helpers/breakpoints";
+@import "../../assets/scss/helpers/variables";
+
+.ShowDetails {
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  color: $white;
+  display: flex;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include sm {
+    min-height: 80vh;
+  }
+  @include xl {
+    background-position: 42rem bottom;
+  }
+
+  @include md {
+    background-position: 32rem bottom;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #4f4f4f, transparent);
+  }
+
+  &__fade {
+    &--top,
+    &--bottom {
+      position: absolute;
+      width: 100%;
+      height: 30%;
+      pointer-events: none;
+    }
+
+    &--top {
+      top: 0;
+    }
+
+    &--bottom {
+      bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    padding: 1rem;
+    @include sm {
+      padding: 2rem;
+    }
+    @include md {
+      padding: 3rem;
+    }
+  }
+
+  &__details {
+    width: 100%;
+    @include md {
+      width: 50%;
+    }
+    @include lg {
+      width: 40%;
+    }
+    @include xl {
+      width: 30%;
+      left: 68%;
+      top: 12%;
+      position: absolute;
+    }
+  }
+
+  &__title {
+    margin: 0 0 1.5rem 0;
+    font-size: 2rem;
+    line-height: 2rem;
+    @include sm {
+      font-size: 1.75rem;
+    }
+    @include md {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: #f1a760;
+    @include sm {
+      font-size: 1.2rem;
+    }
+
+    &--white {
+      color: $white;
+    }
+  }
+}
