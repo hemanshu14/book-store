@@ -22,7 +22,7 @@ describe("AuthorizedHeaderView Test", () => {
             }
 
             cmp = shallowMount(AuthorizedHeaderView, {
-                stubs: ['router-link', 'font-awesome-icon'],
+                stubs: ['router-link'],
                 mocks: {
                     $route
                 }

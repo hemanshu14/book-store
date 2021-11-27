@@ -27,11 +27,11 @@ export default {
   components: {
     ShowsList
   },
-  mounted() {
+  async beforeMount() {
 
     this.hasAdminAccess = this.$store.getters.user.role === 'ADMIN';
 
-    axios.get('https://api.tvmaze.com/shows')
+    await axios.get('https://api.tvmaze.com/shows')
         .then(response => {
           this.showsList = response.data.filter(res => res.image != null).map(show => {
             return {...show, image: show.image.original}
