@@ -1,6 +1,6 @@
 <template>
   <div class="ShowsList__wrapper">
-    <h2 class="ShowsList__title">{{ categoryTitle }}</h2>
+    <h2 class="ShowsList__title">Shows</h2>
     <transition name="fade">
       <div class="ShowsList">
         <ShowListItem
@@ -19,7 +19,6 @@
   export default {
     name: 'ShowsList',
     props: {
-      categoryTitle: String,
       shows: Array
     },
     components: {
